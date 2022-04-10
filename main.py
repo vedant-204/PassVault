@@ -203,8 +203,8 @@ pass_entry = Entry(login_frame, show = "*", borderwidth = 3, font = ("Bahnschrif
 intro_label = Label(login_frame, text = "PassVault"+chr(169), font = ("Bahnschrift Light Condensed",30,"bold"), fg = "#D1E1FF", bg = "#364B71")
 ask = Label(login_frame, text = "Not registered yet ?", font = ("Bahnschrift Light Condensed",10), bg = "#364B71" , fg = "#D1E1FF")
 login_button = Button(login_frame, text = "LOGIN", font = ("Bahnschrift Light Condensed",15), bd = 1,bg = "#4472C4", activebackground = "#364B71", cursor = "hand2", fg = "#FFFFFF", command = login)
-signup_button = Button(login_frame, text = "CREATE AN ACCOUNT", font = ("Bahnschrift Light Condensed",10), bd = 0, bg = "#364B71", activebackground = "#364B71", cursor = "hand2", fg = "#D1E1FF", command = Signup)
-forgot_pass = Button(login_frame, text = "- Forgot Password ? -", font = ("Bahnschrift Light Condensed",10), bd = 0, bg = "#364B71", activebackground = "#364B71", cursor = "hand2", fg = "#D1E1FF", command = forgot_password)
+signup_button = Button(login_frame, borderwidth = 0, text = "CREATE AN ACCOUNT", font = ("Bahnschrift Light Condensed",10), bd = 0, bg = "#364B71", activebackground = "#364B71", cursor = "hand2", fg = "#D1E1FF", command = Signup)
+forgot_pass = Button(login_frame, borderwidth = 0, text = "- Forgot Password ? -", font = ("Bahnschrift Light Condensed",10), bd = 0, bg = "#364B71", activebackground = "#364B71", cursor = "hand2", fg = "#D1E1FF", command = forgot_password)
 
 intro_label.place(x = 100, y = 30 )
 user_label.place(x = 33, y = 90)
@@ -257,7 +257,7 @@ forg_pass1.place(x = 33, y = 300, height = 40, width = 325)
 #user_win_frame
 access_pass = Button(user_window_frame, text = "Access Passwords", font = ("Bahnschrift Light Condensed",15), bd = 1,bg = "#4472C4", activebackground = "#364B71", cursor = "hand2", fg = "#FFFFFF", command = access_pass)
 gen_pass = Button(user_window_frame, text = "Generate Passwords", font = ("Bahnschrift Light Condensed",15), bd = 1,bg = "#4472C4", activebackground = "#364B71", cursor = "hand2", fg = "#FFFFFF", command = generating_pass)
-log_out = Button(user_window_frame, text = "Log Out", font =  ("Bahnschrift Light Condensed", 10),bd = 0 ,bg = "#364B71", activebackground = "#364B71", cursor = "hand2", fg = "#FFFFFF", command = logout)
+log_out = Button(user_window_frame, text = "Log Out", font =  ("Bahnschrift Light Condensed", 10),borderwidth = 0,bg = "#364B71", activebackground = "#364B71", cursor = "hand2", fg = "#FFFFFF", command = logout)
 
 access_pass.place(x = 33, y = 250, height = 60, width = 325)
 gen_pass.place(x = 33, y = 150, height = 60, width = 325)
