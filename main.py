@@ -53,15 +53,15 @@ def sign_user():
         user_entry2.focus()
     else:
         database.store_data()
-        li = [email_entry.get()] 
-        for dest in li:
-            s = smtplib.SMTP('smtp.gmail.com', 587) 
-            s.starttls() 
-            s.login("passvault.storepasses@gmail.com", "storingpasswordshere") 
-            message = "Thank you for registering in PassVault."
-            s.sendmail("passvault.storepasses@gmail.com", dest, message) 
-            s.quit() 
-            login_frame.tkraise()
+        #li = [email_entry.get()] 
+        #for dest in li:
+        #    s = smtplib.SMTP('smtp.gmail.com', 587) 
+        #    s.starttls() 
+        #    s.login("passvault.storepasses@gmail.com", "storingpasswordshere") 
+       #     message = "Thank you for registering in PassVault."
+      #      s.sendmail("passvault.storepasses@gmail.com", dest, message) 
+     #       s.quit() 
+        login_frame.tkraise()
     input_file.close()
     input_file = open('signup_data.txt', 'r+')
     input_file.truncate(0)
