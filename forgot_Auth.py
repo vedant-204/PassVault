@@ -1,10 +1,10 @@
 import mysql.connector
 def givepassword(username_user_auth):
     passdb = mysql.connector.connect(
-        host = "localhost",
-        user = "root",
-        passwd = "1234",
-        database = "password_manager"
+        host = "sql6.freesqldatabase.com",
+        user = "sql6484968",
+        passwd = "5k2eTqIMvv",
+        database = "sql6484968"
         )
     op_cursor = passdb.cursor()
     forgot_comm = "select username from master_table"

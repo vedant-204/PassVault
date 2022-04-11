@@ -132,7 +132,7 @@ def pass_to_database():
         for i in pass_list:
             imp_file.write('%s\n' % i)
     imp_file.close()
-    passdb = mysql.connector.connect(host = "localhost", user = "root", passwd = "1234", database = "password_manager")
+    passdb = mysql.connector.connect(host = "sql6.freesqldatabase.com", user = "sql6484968", passwd = "5k2eTqIMvv", database = "sql6484968")
     op_cursor = passdb.cursor()
     pass_log = open('generating_passes.txt', 'r')
     pass_list = []

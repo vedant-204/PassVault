@@ -3,10 +3,10 @@ import os
 def verify_signup():
     curr_d3 = os.getcwd()
     passdb = mysql.connector.connect(
-        host = "localhost",
-        user = "root",
-        passwd = "1234",
-        database = "password_manager"
+        host = "sql6.freesqldatabase.com",
+        user = "sql6484968",
+        passwd = "5k2eTqIMvv",
+        database = "sql6484968"
         )
     op_cursor = passdb.cursor()
 
@@ -17,13 +17,13 @@ def verify_signup():
             damn = i[:-1]
             data_list_user.append(damn)
     data_user.close()
-    verify_com = "select username, master_password from master_table"
+    verify_com = "select username from master_table"
     op_cursor.execute(verify_com)
     verify1 = op_cursor.fetchall()
     verify_list = []
     verify_list_username = []
     for _ in verify1:
-        verify_list.append(_[1])
+        verify_list.append(_[0])
     for i in verify1:
         verify_list_username.append(i[0])
     if data_list_user[2] in verify_list or data_list_user[0] in verify_list_username:
@@ -33,4 +33,4 @@ def verify_signup():
         create_user_comm = "create table %s (app_name varchar(100), username_app varchar(100), gen_pass varchar(765) unique key, ussid integer auto_increment primary key)"%(s)
         op_cursor.execute(create_user_comm)
         passdb.commit()
-        
+        return True 

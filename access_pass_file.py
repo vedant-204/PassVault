@@ -3,10 +3,10 @@ from mysql.connector import errorcode
 import pyperclip
 def access_my_password(table_name1, x):
     passdb = mysql.connector.connect(
-        host = "localhost",
-        user = "root",
-        passwd = "1234",
-        database = "password_manager"
+        host = "sql6.freesqldatabase.com",
+        user = "sql6484968",
+        passwd = "5k2eTqIMvv",
+        database = "sql6484968"
         )
     op_cursor = passdb.cursor()
     sql = 'select gen_pass from ' + table_name1 + ' where app_name = ' + '"' + x + '"'
