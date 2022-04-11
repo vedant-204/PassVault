@@ -101,7 +101,7 @@ def access_pass():
     Logo_label4 = Label(top3, image = logo1, bg = "#364B71")
     intro1_label2 = Label(acc_pass_frame, text = "Access your password", font = ("Bahnschrift Light Condensed",23,"bold"), fg = "#D1E1FF", bg = "#364B71")
     app_name_label1 = Label(acc_pass_frame, text = "Enter name of application", font = ("Bahnschrift Light Condensed",10), bg = "#364B71" , fg = "#D1E1FF")
-   app_name_menu = ttk.Combobox(acc_pass_frame, value = main_app_li)
+    app_name_menu = ttk.Combobox(acc_pass_frame, value = main_app_li)
     app_name_menu.current(0)
     app_name_menu.bind("<<ComboboxSelected>>",access_frm_database)
     back_out1 = Button(top3, text = "Back", font =  ("Bahnschrift Light Condensed", 10), bd = 1, bg = "#4472C4", activebackground = "#364B71", cursor = "hand2", fg = "#FFFFFF", command = back_butt1)
