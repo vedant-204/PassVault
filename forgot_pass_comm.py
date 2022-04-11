@@ -19,8 +19,8 @@ def iforgotpasses(username_user):
     for dest in li:
         s = smtplib.SMTP('smtp.gmail.com', 587) 
         s.starttls() 
-        s.login("passvault.storepasses@gmail.com", "storingpasswordshere") 
+        s.login("passvault2040@gmail.com", "passvault2003") 
         message = "Your master password for PassVault is " + "'" + str(password_is[0]) + "'" + " ." + " Thank you for using PassVault."
-        s.sendmail("passvault.storepasses@gmail.com", dest, message) 
+        s.sendmail("passvault2040@gmail.com", dest, message) 
         s.quit()
     return password_is[0]

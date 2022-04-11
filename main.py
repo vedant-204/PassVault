@@ -53,14 +53,14 @@ def sign_user():
         user_entry2.focus()
     else:
         database.store_data()
-        #li = [email_entry.get()] 
-        #for dest in li:
-        #    s = smtplib.SMTP('smtp.gmail.com', 587) 
-        #    s.starttls() 
-        #    s.login("passvault.storepasses@gmail.com", "storingpasswordshere") 
-       #     message = "Thank you for registering in PassVault."
-      #      s.sendmail("passvault.storepasses@gmail.com", dest, message) 
-     #       s.quit() 
+        li = [email_entry.get()]
+        for dest in li:
+            s = smtplib.SMTP('smtp.gmail.com', 587)
+            s.starttls()
+            s.login("passvault2040@gmail.com", "passvault2003")
+            message = "Thank you for registering in PassVault."
+            s.sendmail("passvault2040@gmail.com", dest, message)
+            s.quit()
         login_frame.tkraise()
     input_file.close()
     input_file = open('signup_data.txt', 'r+')
@@ -81,7 +81,7 @@ def access_pass():
         access_pass_file.access_my_password(table_name1 = user_entry.get(), x = app_name_menu.get())
         ctypes.windll.user32.MessageBoxW(0, "Password is Copied to your clipboard", "Confirmation", 1)
         top3.destroy()
-        
+
     main_app_li = creating_list_app.list_apps(table_name2 = user_entry.get())
     top3 = Toplevel(root)
     top3.geometry ("754x504")
@@ -89,24 +89,24 @@ def access_pass():
     #top3.iconbitmap(r'icon.ico')
     top3.resizable(0,0)
 
-    back_img4 = Image.open('w1.png') 
+    back_img4 = Image.open('w1.png')
     Logo_img1 = Image.open('logo.png')
-        
+
     back_gg1 = ImageTk.PhotoImage(back_img4)
     logo1 = ImageTk.PhotoImage(Logo_img1)
-        
+
     background4 = Label(top3, image = back_gg1)
     acc_pass_frame = Frame(top3, bg = "#364B71")
-        
-    Logo_label4 = Label(top3, image = logo1, bg = "#364B71")   
+
+    Logo_label4 = Label(top3, image = logo1, bg = "#364B71")
     intro1_label2 = Label(acc_pass_frame, text = "Access your password", font = ("Bahnschrift Light Condensed",23,"bold"), fg = "#D1E1FF", bg = "#364B71")
     app_name_label1 = Label(acc_pass_frame, text = "Enter name of application", font = ("Bahnschrift Light Condensed",10), bg = "#364B71" , fg = "#D1E1FF")
-    app_name_menu = ttk.Combobox(acc_pass_frame, value = main_app_li)
+   app_name_menu = ttk.Combobox(acc_pass_frame, value = main_app_li)
     app_name_menu.current(0)
     app_name_menu.bind("<<ComboboxSelected>>",access_frm_database)
     back_out1 = Button(top3, text = "Back", font =  ("Bahnschrift Light Condensed", 10), bd = 1, bg = "#4472C4", activebackground = "#364B71", cursor = "hand2", fg = "#FFFFFF", command = back_butt1)
 
-        
+
     background4.place(x = 0,y = 0)
     Logo_label4.place(x = 225, y = 22, height = 50, width = 50)
     acc_pass_frame.place(x = 50, y = 50, height = 400, width = 400)
@@ -114,7 +114,7 @@ def access_pass():
     app_name_label1.place(x = 33, y = 110)
     app_name_menu.place(x = 33, y = 135, height = 30, width = 325)
     back_out1.place(x = 693, y = 5, height = 25, width = 55)
-        
+
     top3.mainloop()
 
 def generating_pass():
@@ -154,7 +154,7 @@ def pass_to_database():
     app_name_entry.delete(0, END)
     app_user_name_entry.delete(0, END)
     app_name_entry.focus()
-    
+
 def back_butt():
     user_window_frame.tkraise()
 
@@ -225,7 +225,7 @@ user_entry2 = Entry(signup_frame, borderwidth = 3, font = ("Bahnschrift Light Co
 email_entry = Entry(signup_frame, borderwidth = 3, font = ("Bahnschrift Light Condensed",13))
 Name_entry = Entry(signup_frame, borderwidth = 3, font = ("Bahnschrift Light Condensed",13))
 pass_entry2 = Entry(signup_frame, show = "*", borderwidth = 3, font = ("Bahnschrift Light Condensed",13))
-intro_label2 = Label(signup_frame, text = "Welcome to PassVault", font = ("Bahnschrift Light Condensed",23,"bold"), fg = "#D1E1FF", bg = "#364B71")    
+intro_label2 = Label(signup_frame, text = "Welcome to PassVault", font = ("Bahnschrift Light Condensed",23,"bold"), fg = "#D1E1FF", bg = "#364B71")
 signup_button2 = Button(signup_frame, text = "SIGN UP", font = ("Bahnschrift Light Condensed",15), bd = 1,bg = "#4472C4", activebackground = "#364B71", cursor = "hand2", fg = "#FFFFFF", command = sign_user)
 back_out2 = Button(signup_frame, text = "< Back", font =  ("Bahnschrift Light Condensed", 10), bd = 0, bg = "#364B71", activebackground = "#364B71", cursor = "hand2", fg = "#FFFFFF", command = back_butt2)
 
@@ -282,5 +282,4 @@ back_out.place(x = 33, y = 350, height = 25, width = 55)
 
 login_frame.tkraise()
 
-root.mainloop()
-# cN!hn\Gj6~V0L|rJ
+root.mainloop() 
